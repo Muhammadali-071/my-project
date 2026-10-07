@@ -1,0 +1,297 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #8e8e5d, #5d5d3a);
+    color: #f5f1e7;
+    font-family: "Merriweather", serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 68px;
+}
+
+section {
+    min-height: 100vh;
+}
+
+main {
+    margin-top: 0;
+}
+
+.hero-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    min-height: 100vh;
+    padding: 40px 60px;
+    width: 100%;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 700px;
+    max-width: 100%;
+    min-height: auto;
+    gap: 20px;
+    font-size: large;
+    font-family: "Merriweather", serif;
+}
+
+.hero-section h2,
+.second-section h2 {
+    color: #fffaf0;
+    line-height: 1.2;
+}
+
+.hero-section p,
+.second-section p {
+    color: rgba(255, 250, 240, 0.92);
+    line-height: 1.7;
+}
+
+.about-section {
+    padding-top: 0vh;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    padding: 14px clamp(24px, 6vw, 80px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(63, 64, 40, 0.22);
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    width: 46px;
+    height: 58px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+nav {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(20px, 3vw, 42px);
+}
+
+.btn {
+    min-width: 112px;
+    min-height: 42px;
+    padding: 0 20px;
+    background-color: #f4f0df;
+    color: #3f4028;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #3f4028;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+nav a {
+    position: relative;
+    padding: 8px 0;
+    color: #fffdf2;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #e4d6a3;
+}
+
+nav a::after {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+    left: 0;
+    height: 2px;
+    background-color: #e4d6a3;
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.turka {
+    width: 450px;
+    height: 635px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.second-hero {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    min-height: 100vh;
+    padding: 40px 60px;
+}
+
+.second-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 700px;
+    max-width: 100%;
+    min-height: auto;
+    gap: 20px;
+    font-size: large;
+    font-family: "Merriweather", serif;
+}
+
+.second-hero img {
+    width: 450px;
+    height: 635px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 36px 24px;
+    background-color: #3f4028;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Merriweather", serif;
+}
+
+.footer-brand {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+.booking-card {
+    position: fixed;
+    z-index: 10;
+    top: 86%;
+    right: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 260px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    background-color: #f4f0df;
+    color: #3f4028;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    font-family: "Merriweather", serif;
+    transform: translateY(-50%);
+}
+
+.booking-card h2 {
+    font-size: 18px;
+}
+
+.booking-card p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.booking-card a {
+    padding: 10px 14px;
+    border-radius: 20px;
+    background-color: #52570e;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.booking-card a:hover {
+    background-color: #3f4028;
+}
+
+@media (max-width: 900px) {
+    header {
+        flex-wrap: wrap;
+        gap: 12px 20px;
+        padding: 12px 24px;
+    }
+
+    nav {
+        order: 3;
+        flex-basis: 100%;
+        gap: 24px;
+    }
+
+    .hero-text {
+        flex-direction: column;
+        padding: 40px 24px;
+    }
+
+    .hero-section {
+        width: 100%;
+    }
+
+    .turka {
+        width: min(450px, 100%);
+        height: auto;
+        max-height: 635px;
+    }
+
+    .second-hero {
+        flex-direction: column;
+        padding: 40px 24px;
+    }
+
+    .second-section {
+        width: 100%;
+    }
+
+    .second-hero img {
+        width: min(450px, 100%);
+        height: auto;
+        max-height: 635px;
+    }
+
+    .booking-card {
+        top: auto;
+        right: 16px;
+        bottom: 16px;
+        width: min(260px, calc(100vw - 32px));
+        transform: none;
+    }
+}
